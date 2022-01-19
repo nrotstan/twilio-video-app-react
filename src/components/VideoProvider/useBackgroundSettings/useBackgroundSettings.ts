@@ -148,6 +148,8 @@ export default function useBackgroundSettings(videoTrack: LocalVideoTrack | unde
       }
       removeProcessor();
       videoTrack.addProcessor(processor);
+      console.log('**** Added processor to video track');
+      console.log(JSON.stringify(videoTrack));
     },
     [videoTrack, removeProcessor]
   );
